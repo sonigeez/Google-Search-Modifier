@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Google Search Result Modifier",
+  "version": "1.0",
+  "description": "Adds a static text to Google Search Results",
+  "host_permissions": ["https://www.google.com/*"],
+  "content_scripts": [
+      {
+          "matches": ["https://www.google.com/*"],
+          "js": ["content.js"],
+          "run_at": "document_end"
+      }
+  ]
+}
+
