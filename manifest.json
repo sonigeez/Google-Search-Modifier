@@ -3,7 +3,14 @@
   "name": "Google Search Result Modifier",
   "version": "1.0",
   "description": "Adds a static text to Google Search Results",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
   "host_permissions": ["https://www.google.com/*"],
+  "permissions": ["storage"],
   "content_scripts": [
       {
           "matches": ["https://www.google.com/*"],
@@ -12,4 +19,3 @@
       }
   ]
 }
-
